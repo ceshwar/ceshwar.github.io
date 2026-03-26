@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lab - Eshwar Chandrasekharan</title>
-    <meta name="theme-color" content="#0e7490" />
+    <meta name="theme-color" content="#1B2A4A" />
     <link rel="icon" href="../images/scuba-logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="../images/scuba-logo.png" />
     <link rel="stylesheet" href="../style.css" />
@@ -25,7 +25,7 @@
       </div>
     </header>
 
-    <main class="container">
+    <main class="container lab-page">
       <div class="lab-hero">
         <img
           class="lab-logo"
@@ -37,11 +37,12 @@
           decoding="async"
         />
         <div class="lab-hero-text">
-          <h1>SCUBA: THE SOCIAL COMPUTING LABORATORY</h1>
+          <h1>SCUBA: The Social Computing Laboratory</h1>
         </div>
       </div>
+
       <div class="prose">
-        <p>
+        <p class="lab-intro">
           The Social Computing Laboratory (SCUBA) aims to make the internet a safer and more welcoming place by developing new
           scientific methods and computational tools. Our work broadly intersects with social computing, data science, human-centered AI,
           and natural language processing. SCUBA's current research is related to facilitating healthy online interactions and developing new
@@ -55,81 +56,138 @@
 
         <hr class="sep" />
 
-        <h2>ONGOING PROJECTS</h2>
-        <ol>
-          <li>
-            Methods to shape user behavior via positive reinforcement, feedback mechanisms, and norm teaching (e.g., efficacy of positive
-            reinforcement on <a href="https://arxiv.org/abs/2409.20410">Reddit</a> and <a href="https://arxiv.org/abs/2404.03612">YouTube</a>)
+        <h2 class="section-heading" id="ongoing">Ongoing projects</h2>
+        <ul class="project-grid">
+          <li class="project-card">
+            <h3 class="project-card-title">Positive reinforcement &amp; norm teaching</h3>
+            <p class="project-card-desc">
+              Shaping behavior through reinforcement, feedback mechanisms, and norms in large online communities.
+            </p>
+            <p class="project-card-links">
+              Examples:
+              <a href="https://arxiv.org/abs/2409.20410">Reddit</a>
+              ·
+              <a href="https://arxiv.org/abs/2404.03612">YouTube</a>
+            </p>
           </li>
-          <li>
-            Models to identify desirable behavior online (e.g., quantifying <a href="https://arxiv.org/abs/2102.08368">prosocial outcomes</a> in online interactions)
-          </li>
-          <li>
-            Computational approaches to help users navigate large-scale online discussions (e.g.,
-            <a href="../files/choi-convex.pdf">ConvEx</a>,
-            <a href="https://arxiv.org/abs/2506.11276">Needle</a>,
-            <a href="https://arxiv.org/abs/2508.19580">ArgCMV</a>)
-          </li>
-          <li>
-            Empirical audits of algorithmically curated social media feeds (e.g., empirical <a href="https://arxiv.org/abs/2502.20491">audits</a> of
-            Reddit's <a href="../files/icwsm2024-community-resilience.pdf">r/popular</a> feed)
-          </li>
-          <li>
-            Real-time deployment of AI-powered tools for social computing applications (e.g.,
-            <a href="https://dl.acm.org/doi/10.1145/3613905.3650828">LLM-Mod</a>,
-            <a href="https://arxiv.org/abs/2410.13155">SLM-Mod</a>,
-            <a href="https://arxiv.org/abs/2505.14483">MoMoE</a>)
-          </li>
-          <li>
-            Gray areas in online governance: Mismatches in stakeholder expectations (e.g.,
-            <a href="../files/koshy-user-mod-alignment.pdf">User-Mod Alignment on Reddit</a>)
-          </li>
-        </ol>
 
-        <p>
-          For a full list of our research papers, check out our <a href="../publications/">publications</a>. For project-related code, check out
-          <a href="https://github.com/scuba-illinois">GitHub</a>.
-        </p>
+          <li class="project-card">
+            <h3 class="project-card-title">Desirable behavior online</h3>
+            <p class="project-card-desc">
+              Models and metrics for prosocial and community-valued behavior in social platforms.
+            </p>
+            <p class="project-card-links">
+              Example:
+              <a href="https://arxiv.org/abs/2102.08368">prosocial outcomes</a>
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3 class="project-card-title">Navigating large discussions</h3>
+            <p class="project-card-desc">
+              Tools and interfaces for moderators and readers to make sense of threaded, high-volume conversations.
+            </p>
+            <p class="project-card-links">
+              <a href="../files/choi-convex.pdf">ConvEx</a>
+              ·
+              <a href="https://arxiv.org/abs/2506.11276">Needle</a>
+              ·
+              <a href="https://arxiv.org/abs/2508.19580">ArgCMV</a>
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3 class="project-card-title">Audits of curated feeds</h3>
+            <p class="project-card-desc">
+              Empirical studies of how algorithmic ranking surfaces content and shapes communities.
+            </p>
+            <p class="project-card-links">
+              <a href="https://arxiv.org/abs/2502.20491">Feed audit</a>
+              ·
+              <a href="../files/icwsm2024-community-resilience.pdf">r/popular</a>
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3 class="project-card-title">Real-time AI for governance</h3>
+            <p class="project-card-desc">
+              Deploying and evaluating language-model systems for moderation and community support at scale.
+            </p>
+            <p class="project-card-links">
+              <a href="https://dl.acm.org/doi/10.1145/3613905.3650828">LLM-Mod</a>
+              ·
+              <a href="https://arxiv.org/abs/2410.13155">SLM-Mod</a>
+              ·
+              <a href="https://arxiv.org/abs/2505.14483">MoMoE</a>
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3 class="project-card-title">Governance &amp; alignment</h3>
+            <p class="project-card-desc">
+              Tensions and mismatches between moderators, members, and platform policy across communities.
+            </p>
+            <p class="project-card-links">
+              <a href="../files/koshy-user-mod-alignment.pdf">User–mod alignment on Reddit</a>
+            </p>
+          </li>
+        </ul>
+
+        <div class="lab-footer-note">
+          For a full list of papers, see <a href="../publications/">publications</a>. For code and artifacts, visit
+          <a href="https://github.com/scuba-illinois">SCUBA on GitHub</a>.
+        </div>
 
         <hr class="sep" />
 
-        <h2>PEOPLE</h2>
+        <h2 class="section-heading" id="people">People</h2>
 
         <p><strong>Professor:</strong> Eshwar Chandrasekharan</p>
-        <p><strong>PhD:</strong></p>
-        <ol>
-          <li>Charlotte Lambert</li>
-          <li>Fred Choi</li>
-          <li>Jackie Chan</li>
-          <li>Agam Goyal</li>
-          <li>Claire Wang</li>
-          <li>Yuchen Wu</li>
-        </ol>
 
-        <p><strong>Undergraduate:</strong></p>
-        <ol>
-          <li>Yoshee Jain!</li>
-          <li>Eunice Mok!</li>
-          <li>Sriya Gottiparthi!</li>
-        </ol>
+        <div class="people-block">
+          <h3>PhD students</h3>
+          <ol class="people-list">
+            <li>Charlotte Lambert</li>
+            <li>Fred Choi</li>
+            <li>Jackie Chan</li>
+            <li>Agam Goyal</li>
+            <li>Claire Wang</li>
+            <li>Yuchen Wu</li>
+          </ol>
+        </div>
 
-        <p>(! = CS STARS)</p>
+        <div class="people-block">
+          <h3>Undergraduate researchers</h3>
+          <ol class="people-list">
+            <li>Yoshee Jain <span class="stars-flag">(CS STARS)</span></li>
+            <li>Eunice Mok <span class="stars-flag">(CS STARS)</span></li>
+            <li>Sriya Gottiparthi <span class="stars-flag">(CS STARS)</span></li>
+          </ol>
+        </div>
 
-        <p><strong>Alumni - PhD:</strong></p>
-        <ol>
-          <li>Tanvi Bajpai (2021-2025). Thesis: Beyond the Black Box: Towards Bridging Theoretical Computer Science and HCI</li>
-        </ol>
+        <div class="people-block">
+          <h3>Alumni — PhD</h3>
+          <ol class="people-list">
+            <li>Tanvi Bajpai (2021–2025). Thesis: Beyond the Black Box: Towards Bridging Theoretical Computer Science and HCI</li>
+          </ol>
+        </div>
 
-        <p><strong>Alumni - MS:</strong></p>
-        <ol>
-          <li>Omkar Gurjar (2023-2025). Thesis- Distilling Arguments: A Study of Human and LLM Persuasion in the Online Discourse</li>
-          <li>Harita Reddy (2021-2023). Thesis- Studying Rule Trajectories in Reddit Communities</li>
-          <li>Dominic Jones (2021-2023). Thesis- Measuring Epistemic Trust: Towards a New Lens for Democratic Legitimacy, Misinformation, and Echo Chambers</li>
-        </ol>
+        <div class="people-block">
+          <h3>Alumni — MS</h3>
+          <ol class="people-list">
+            <li>Omkar Gurjar (2023–2025). Thesis: Distilling Arguments: A Study of Human and LLM Persuasion in the Online Discourse</li>
+            <li>Harita Reddy (2021–2023). Thesis: Studying Rule Trajectories in Reddit Communities</li>
+            <li>Dominic Jones (2021–2023). Thesis: Measuring Epistemic Trust: Towards a New Lens for Democratic Legitimacy, Misinformation, and Echo Chambers</li>
+          </ol>
+        </div>
 
-        <p><strong>Undergraduate:</strong> Sowmya Pratipati, Tue Do, Aarohi Gupta, Ishq Gupta, Ayaan Shah, Drshika Asher, Ananya Rajagopal, Anwesa Goswami</p>
+        <div class="people-block">
+          <h3>Alumni — Undergraduate</h3>
+          <p class="people-inline">
+            Sowmya Pratipati, Tue Do, Aarohi Gupta, Ishq Gupta, Ayaan Shah, Drshika Asher, Ananya Rajagopal, Anwesa Goswami
+          </p>
+        </div>
       </div>
     </main>
   </body>
 </html>
-
