@@ -16,12 +16,20 @@
           <img class="site-logo" src="../images/scuba-logo.png" alt="" width="36" height="36" />
           <span class="brand-text">Eshwar</span>
         </a>
-        <nav aria-label="Primary">
-          <a href="../">Home</a>
-          <a href="../publications/">Publications</a>
-          <a href="./">Lab</a>
-          <a href="../contact/">Contact</a>
-        </nav>
+        <div class="site-header-controls">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <a href="../">Home</a>
+            <a href="../bio/">Bio</a>
+            <a href="../publications/">Publications</a>
+            <a href="./">Lab</a>
+            <a href="../contact/">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -42,17 +50,31 @@
       </div>
 
       <div class="prose">
-        <p class="lab-intro">
-          The Social Computing Laboratory (SCUBA) aims to make the internet a safer and more welcoming place by developing new
-          scientific methods and computational tools. Our work broadly intersects with social computing, data science, human-centered AI,
-          and natural language processing. SCUBA's current research is related to facilitating healthy online interactions and developing new
-          human-AI systems for social computing applications. We actively work with large-scale Internet platforms including
-          Reddit, Twitch, and Facebook, and our research has impacted their efforts to improve online governance.
-        </p>
-        <p>
-          SCUBA is a part of the <a href="https://siebelschool.illinois.edu/">Siebel School of Computing and Data Science</a>
-          at the <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>.
-        </p>
+        <nav class="page-nav page-nav--lab" aria-labelledby="lab-nav-label">
+          <div class="page-nav-head">
+            <span class="page-nav-label" id="lab-nav-label">On this page</span>
+          </div>
+          <ul class="section-rail" role="list">
+            <li><a href="#lab-intro">Overview</a></li>
+            <li><a href="#ongoing">Ongoing projects</a></li>
+            <li><a href="#lab-more">Links &amp; code</a></li>
+            <li><a href="#people">People</a></li>
+          </ul>
+        </nav>
+
+        <section id="lab-intro" aria-label="Overview">
+          <p class="lab-intro">
+            The Social Computing Laboratory (SCUBA) aims to make the internet a safer and more welcoming place by developing new
+            scientific methods and computational tools. Our work broadly intersects with social computing, data science, human-centered AI,
+            and natural language processing. SCUBA's current research is related to facilitating healthy online interactions and developing new
+            human-AI systems for social computing applications. We actively work with large-scale Internet platforms including
+            Reddit, Twitch, and Facebook, and our research has impacted their efforts to improve online governance.
+          </p>
+          <p>
+            SCUBA is a part of the <a href="https://siebelschool.illinois.edu/">Siebel School of Computing and Data Science</a>
+            at the <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>.
+          </p>
+        </section>
 
         <hr class="sep" />
 
@@ -133,7 +155,7 @@
           </li>
         </ul>
 
-        <div class="lab-footer-note">
+        <div class="lab-footer-note" id="lab-more">
           For a full list of papers, see <a href="../publications/">publications</a>. For code and artifacts, visit
           <a href="https://github.com/scuba-illinois">SCUBA on GitHub</a>.
         </div>
@@ -189,5 +211,6 @@
         </div>
       </div>
     </main>
+    <script src="../js/site-nav.js" defer></script>
   </body>
 </html>

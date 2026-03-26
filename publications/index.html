@@ -16,18 +16,67 @@
           <img class="site-logo" src="../images/scuba-logo.png" alt="" width="36" height="36" />
           <span class="brand-text">Eshwar</span>
         </a>
-        <nav aria-label="Primary">
-          <a href="../">Home</a>
-          <a href="./">Publications</a>
-          <a href="../lab/">Lab</a>
-          <a href="../contact/">Contact</a>
-        </nav>
+        <div class="site-header-controls">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <a href="../">Home</a>
+            <a href="../bio/">Bio</a>
+            <a href="./">Publications</a>
+            <a href="../lab/">Lab</a>
+            <a href="../contact/">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main class="container">
       <h1 class="page-heading">Selected Publications</h1>
       <div class="prose">
+        <p class="page-lead">
+          Check out <a href="https://scholar.google.com/citations?user=1cPwS48AAAAJ">all papers indexed on Google Scholar</a>.
+        </p>
+        <nav class="page-nav page-nav--years" aria-labelledby="year-nav-label">
+          <div class="page-nav-head">
+            <span class="page-nav-label" id="year-nav-label">Jump to year</span>
+            <span class="page-nav-label page-nav-label--hint">Newest → older</span>
+          </div>
+          <ul class="year-rail" role="list">
+            <li><a href="#y-2026">2026</a></li>
+            <li><a href="#y-2025">2025</a></li>
+            <li><a href="#y-2024">2024</a></li>
+            <li><a href="#y-2023">2023</a></li>
+            <li><a href="#y-2022">2022</a></li>
+            <li><a href="#y-2021">2021</a></li>
+            <li><a href="#y-2020">2020</a></li>
+            <li><a href="#y-doctoral-thesis">Thesis</a></li>
+            <li><a href="#y-2019">2019</a></li>
+            <li><a href="#y-2018">2018</a></li>
+            <li><a href="#y-2017">2017</a></li>
+            <li><a href="#y-2015">2015</a></li>
+          </ul>
+          <div class="year-select-wrap">
+            <label for="pub-year-select" class="visually-hidden">Jump to publication year</label>
+            <select id="pub-year-select" class="year-select">
+              <option value="">Select year…</option>
+              <option value="y-2026">2026</option>
+              <option value="y-2025">2025</option>
+              <option value="y-2024">2024</option>
+              <option value="y-2023">2023</option>
+              <option value="y-2022">2022</option>
+              <option value="y-2021">2021</option>
+              <option value="y-2020">2020</option>
+              <option value="y-doctoral-thesis">Doctoral thesis</option>
+              <option value="y-2019">2019</option>
+              <option value="y-2018">2018</option>
+              <option value="y-2017">2017</option>
+              <option value="y-2015">2015</option>
+            </select>
+          </div>
+        </nav>
         <div class="publications-list">
 <section class="pub-year" id="y-2026">
 <h2 class="pub-year-heading">2026</h2>
@@ -304,7 +353,9 @@
 </div>
       </div>
     </main>
+    <script src="../js/site-nav.js" defer></script>
     <script src="../js/publications-abstracts.js" defer></script>
+    <script src="../js/publications-nav.js" defer></script>
   </body>
 </html>
 

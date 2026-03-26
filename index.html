@@ -16,12 +16,20 @@
           <img class="site-logo" src="./images/scuba-logo.png" alt="" width="36" height="36" />
           <span class="brand-text">Eshwar</span>
         </a>
-        <nav aria-label="Primary">
-          <a href="./">Home</a>
-          <a href="./publications/">Publications</a>
-          <a href="./lab/">Lab</a>
-          <a href="./contact/">Contact</a>
-        </nav>
+        <div class="site-header-controls">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <a href="./">Home</a>
+            <a href="./bio/">Bio</a>
+            <a href="./publications/">Publications</a>
+            <a href="./lab/">Lab</a>
+            <a href="./contact/">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -47,28 +55,13 @@
           <a href="files/eshwar_cv_jan_2026.pdf">CV</a>.
           More info about current projects are on
           <a href="./lab/">my lab's webpage</a>.
-        </p>
-
-        <hr class="sep" />
-
-        <p>
-          <strong>Bio:</strong>
-          Eshwar Chandrasekharan is an Assistant Professor of Computer Science at the University of Illinois Urbana-Champaign.
-          His research builds a foundation for evaluating and improving approaches to online governance, and involves developing new AI-backed
-          sociotechnical systems to foster desirable behavior. Dr. Chandrasekharan is the recipient of a National Science Foundation CAREER award,
-          a Facebook Research Award, a Best Paper Award at CSCW, Honorable Mentions at DIS and WebSci, and Editor's Pick for Notable Paper at TOCHI.
-          His research has also received considerable press coverage—e.g., <a href="https://www.nytimes.com/2017/09/25/business/reddit-limits-noxious-content-by-giving-trolls-fewer-places-to-gather.html">The New York Times</a>,
-          <a href="https://www.theverge.com/2017/10/9/16446920/internet-ban-nazis-white-supremacist-hosting-providers-charlottesville">The Verge</a>,
-          <a href="https://www.technologyreview.com/s/614081/cloudflare-8chan-deplatforming-hate-speech-online-extremism-politics/">MIT Technology Review</a>,
-          <a href="https://techcrunch.com/2017/09/11/study-finds-reddits-controversial-ban-of-its-most-toxic-subreddits-actually-worked/">TechCrunch</a>, and
-          <a href="https://www.vice.com/en_us/article/zm3ez3/study-finds-that-banning-trolls-works-to-some-degree">MotherBoard</a>.
-          Professor Chandrasekharan holds a Ph.D. in Computer Science from the Georgia Institute of Technology, and a B.Tech + M.Tech in Computer Science
-          from the Indian Institute of Technology Madras.
+          A longer biography is on the <a href="./bio/">Bio</a> page.
         </p>
           </div>
         </div>
       </div>
     </main>
+    <script src="./js/site-nav.js" defer></script>
   </body>
 </html>
 
