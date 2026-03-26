@@ -438,7 +438,6 @@ header.site-header {
 
 section.pub-year,
 #ongoing,
-#lab-more,
 #people,
 #lab-intro {
   scroll-margin-top: 5.5rem;
@@ -447,7 +446,6 @@ section.pub-year,
 @media (max-width: 768px) {
   section.pub-year,
   #ongoing,
-  #lab-more,
   #people,
   #lab-intro {
     scroll-margin-top: 4.5rem;
