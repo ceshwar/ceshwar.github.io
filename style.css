@@ -1,105 +1,251 @@
-/* Minimal, readable styling for the static personal site. */
+/* SCUBA lab–inspired theme: ocean / teal, readable academic site */
 
-:root{
-  --text: #111;
-  --muted: #555;
-  --link: #0b5fff;
-  --bg: #fff;
-  --border: rgba(0,0,0,0.12);
-  --max: 860px;
+:root {
+  /* Ocean & teal (SCUBA / social computing) */
+  --header-start: #0c4a6e;
+  --header-end: #0e7490;
+  --accent: #0d9488;
+  --accent-soft: rgba(13, 148, 136, 0.12);
+  --text: #134e4a;
+  --text-muted: #3f6f6a;
+  --link: #0f766e;
+  --link-hover: #115e59;
+  --bg: #f0fdfa;
+  --card: #ffffff;
+  --border: rgba(15, 118, 110, 0.15);
+  --shadow: rgba(15, 77, 99, 0.08);
+  --max: 900px;
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --text: #f1f1f1;
-    --muted: #bdbdbd;
-    --link: #7aa7ff;
-    --bg: #0f1115;
-    --border: rgba(255,255,255,0.12);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-start: #042f2e;
+    --header-end: #134e4a;
+    --text: #ecfdf5;
+    --text-muted: #99f6e4;
+    --link: #5eead4;
+    --link-hover: #99f6e4;
+    --bg: #0f172a;
+    --card: rgba(19, 78, 74, 0.35);
+    --border: rgba(94, 234, 212, 0.2);
+    --shadow: rgba(0, 0, 0, 0.35);
+    --accent-soft: rgba(94, 234, 212, 0.1);
   }
 }
 
-html, body{
+html,
+body {
   background: var(--bg);
   color: var(--text);
   margin: 0;
   padding: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  line-height: 1.6;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.65;
 }
 
-.container{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 28px 18px;
-}
-
-a{
+a {
   color: var(--link);
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
-header.site-header{
-  border-bottom: 1px solid var(--border);
+/* Top bar */
+header.site-header {
+  background: linear-gradient(120deg, var(--header-start) 0%, var(--header-end) 55%, #155e75 100%);
+  border-bottom: none;
+  box-shadow: 0 2px 12px var(--shadow);
 }
 
-.site-header-inner{
+.site-header-inner {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 14px 18px;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
 
-.brand{
-  font-weight: 650;
+.brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.15rem;
+  color: #f0fdfa !important;
 }
 
-nav{
+.brand:hover {
+  color: #ccfbf1 !important;
+  text-decoration: none;
+}
+
+nav {
   display: flex;
-  gap: 14px;
+  gap: 8px 18px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-main{
-  padding-top: 12px;
+nav a {
+  color: rgba(240, 253, 250, 0.92) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
 }
 
-h1{
-  margin: 0 0 10px 0;
-  font-size: 2rem;
+nav a:hover {
+  color: #ffffff !important;
+  border-bottom-color: rgba(204, 251, 241, 0.7);
+  text-decoration: none;
 }
 
-h2{
+main {
+  padding-top: 8px;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+/* Home: headshot + intro */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px 36px;
+  margin-bottom: 8px;
+}
+
+.headshot {
+  width: min(240px, 100%);
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  aspect-ratio: 343 / 332;
+  box-shadow: 0 8px 28px var(--shadow);
+  border: 3px solid var(--card);
+  background: var(--card);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: min(100%, 280px);
+}
+
+.hero-text h1 {
+  margin-top: 0;
+  font-size: clamp(1.75rem, 4vw, 2.15rem);
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.03em;
+}
+
+/* Lab: logo + title */
+.lab-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 28px;
+  margin-bottom: 20px;
+  padding: 20px 22px;
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.lab-logo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  padding: 10px;
+}
+
+.lab-hero-text h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  flex: 1;
+  min-width: min(100%, 240px);
+}
+
+.page-heading {
+  margin: 0 0 18px 0;
+  font-size: clamp(1.65rem, 3.5vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
   margin: 28px 0 12px 0;
-  font-size: 1.35rem;
+  font-size: 1.28rem;
+  color: var(--text);
+  font-weight: 650;
 }
 
-hr.sep{
+hr.sep {
   border: 0;
   border-top: 1px solid var(--border);
   margin: 24px 0;
 }
 
-.prose{
+.prose {
   max-width: 760px;
 }
 
-.prose p{
-  margin: 10px 0;
+.prose p {
+  margin: 12px 0;
+  color: var(--text);
 }
 
-.publications-pre{
+.prose strong {
+  color: var(--text);
+}
+
+/* Publications block */
+.publications-pre {
   white-space: pre-wrap;
   word-break: break-word;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   font-size: 0.98rem;
+  line-height: 1.55;
+  padding: 20px 22px;
+  background: var(--card);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 16px var(--shadow);
 }
 
+.publications-pre a {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .lab-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lab-hero-text h1 {
+    text-align: center;
+  }
+}
