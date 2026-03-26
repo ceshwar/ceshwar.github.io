@@ -1,0 +1,105 @@
+/* Minimal, readable styling for the static personal site. */
+
+:root{
+  --text: #111;
+  --muted: #555;
+  --link: #0b5fff;
+  --bg: #fff;
+  --border: rgba(0,0,0,0.12);
+  --max: 860px;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --text: #f1f1f1;
+    --muted: #bdbdbd;
+    --link: #7aa7ff;
+    --bg: #0f1115;
+    --border: rgba(255,255,255,0.12);
+  }
+}
+
+html, body{
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+header.site-header{
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header-inner{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand{
+  font-weight: 650;
+}
+
+nav{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+main{
+  padding-top: 12px;
+}
+
+h1{
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+}
+
+h2{
+  margin: 28px 0 12px 0;
+  font-size: 1.35rem;
+}
+
+hr.sep{
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+.prose{
+  max-width: 760px;
+}
+
+.prose p{
+  margin: 10px 0;
+}
+
+.publications-pre{
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-size: 0.98rem;
+}
+
