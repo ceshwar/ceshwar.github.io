@@ -611,9 +611,33 @@ ul.lab-threads {
   vertical-align: baseline;
 }
 
+.lab-theme-pill--governance {
+  background: linear-gradient(120deg, rgba(27, 42, 74, 0.14), var(--accent-soft));
+}
+
+.lab-theme-pill--behavior {
+  background: linear-gradient(120deg, var(--accent-soft), rgba(27, 42, 74, 0.08));
+}
+
+.lab-theme-pill--audits {
+  background: linear-gradient(120deg, rgba(27, 42, 74, 0.08), rgba(234, 88, 12, 0.2));
+}
+
 @media (prefers-color-scheme: dark) {
   .lab-theme-pill {
     color: #f1f5f9 !important;
+  }
+
+  .lab-theme-pill--governance {
+    background: linear-gradient(120deg, rgba(15, 23, 42, 0.6), var(--accent-soft));
+  }
+
+  .lab-theme-pill--behavior {
+    background: linear-gradient(120deg, var(--accent-soft), rgba(15, 23, 42, 0.45));
+  }
+
+  .lab-theme-pill--audits {
+    background: linear-gradient(120deg, rgba(15, 23, 42, 0.45), rgba(251, 146, 60, 0.25));
   }
 }
 
@@ -693,12 +717,43 @@ li.project-card {
   letter-spacing: 0.04em;
 }
 
-/* Lab: people blocks */
-.people-block {
-  margin: 1.25rem 0 1.75rem;
+/* Lab: people section */
+.people-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.people-block h3 {
+.people-card {
+  position: relative;
+  padding: 1rem 1.05rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 2px 14px var(--shadow);
+  overflow: hidden;
+}
+
+.people-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--navy), var(--accent));
+}
+
+.people-card--lead::before {
+  background: linear-gradient(90deg, var(--accent), var(--navy));
+}
+
+.people-card--alumni {
+  background: linear-gradient(135deg, var(--card) 0%, rgba(234, 88, 12, 0.04) 100%);
+}
+
+.people-card h3 {
   margin: 0 0 0.65rem 0;
   font-size: 0.82rem;
   font-weight: 700;
@@ -707,26 +762,90 @@ li.project-card {
   color: var(--text-muted);
 }
 
-.people-list {
+.people-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.people-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: linear-gradient(120deg, rgba(27, 42, 74, 0.06), var(--accent-soft));
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.25;
+}
+
+.people-list {
+  margin: 0.1rem 0 0 0;
   padding-left: 1.35rem;
   color: var(--text);
-  line-height: 1.75;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 .people-list li {
-  margin: 0.25rem 0;
+  margin: 0.4rem 0;
 }
 
-.people-inline {
-  margin: 0.75rem 0 0;
-  line-height: 1.75;
+.people-list--details {
+  padding-left: 1.15rem;
 }
 
 .stars-flag {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent);
-  font-size: 0.9em;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Floating back-to-top control */
+.back-to-top {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right, 0px));
+  bottom: max(20px, calc(16px + env(safe-area-inset-bottom, 0px)));
+  z-index: 350;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: linear-gradient(120deg, var(--navy), var(--accent));
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 22px var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+}
+
+.back-to-top:hover {
+  filter: brightness(1.05);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .lab-footer-note {
