@@ -802,6 +802,11 @@ li.project-card {
   list-style: none;
 }
 
+.people-level--alumni-root .people-chip-list {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .people-chip {
   display: inline-flex;
   align-items: center;
