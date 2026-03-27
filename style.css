@@ -784,6 +784,11 @@ li.project-card {
   line-height: 1.25;
 }
 
+.people-chip--muted {
+  color: var(--text-muted);
+  background: linear-gradient(120deg, rgba(27, 42, 74, 0.04), rgba(27, 42, 74, 0.02));
+}
+
 .people-list {
   margin: 0.1rem 0 0 0;
   padding-left: 1.35rem;
@@ -798,6 +803,39 @@ li.project-card {
 
 .people-list--details {
   padding-left: 1.15rem;
+}
+
+.alumni-person-block {
+  margin: 0.75rem 0 0;
+}
+
+.alumni-person-block:first-of-type {
+  margin-top: 0.2rem;
+}
+
+.alumni-person-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.alumni-person-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.alumni-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: linear-gradient(120deg, rgba(27, 42, 74, 0.08), var(--accent-soft));
+  color: var(--text);
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 .stars-flag {
