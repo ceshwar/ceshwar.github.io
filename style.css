@@ -649,6 +649,11 @@ li.project-card {
   font-weight: 600;
 }
 
+.positive-queue {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
 /* Lab: people blocks */
 .people-block {
   margin: 1.25rem 0 1.75rem;
