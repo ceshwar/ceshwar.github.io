@@ -578,6 +578,45 @@ main {
   line-height: 1.7;
 }
 
+ul.lab-threads {
+  margin: 0.35rem 0 1.15rem;
+  padding-left: 1.35rem;
+}
+
+.lab-threads li {
+  margin: 0.55rem 0;
+  padding-left: 0.35rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.lab-threads li::marker {
+  color: var(--accent);
+}
+
+.lab-theme-pill {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy) !important;
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  vertical-align: baseline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lab-theme-pill {
+    color: #f1f5f9 !important;
+  }
+}
+
 /* Ongoing projects: card grid */
 ul.project-grid {
   list-style: none;
