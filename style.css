@@ -717,49 +717,80 @@ li.project-card {
   letter-spacing: 0.04em;
 }
 
-/* Lab: people section */
-.people-layout {
+/* Lab: people hierarchy */
+.people-tree {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
-  gap: 1rem;
+  gap: 0.8rem;
   margin-top: 1rem;
 }
 
-.people-card {
-  position: relative;
-  padding: 1rem 1.05rem 1.1rem;
-  border-radius: 14px;
+.people-level {
+  margin: 0;
   border: 1px solid var(--border);
+  border-radius: 12px;
   background: var(--card);
-  box-shadow: 0 2px 14px var(--shadow);
+  box-shadow: 0 2px 12px var(--shadow);
   overflow: hidden;
 }
 
-.people-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--navy), var(--accent));
-}
-
-.people-card--lead::before {
-  background: linear-gradient(90deg, var(--accent), var(--navy));
-}
-
-.people-card--alumni {
-  background: linear-gradient(135deg, var(--card) 0%, rgba(234, 88, 12, 0.04) 100%);
-}
-
-.people-card h3 {
-  margin: 0 0 0.65rem 0;
-  font-size: 0.82rem;
+.people-level > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.72rem 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  color: var(--text);
+  background: linear-gradient(120deg, rgba(27, 42, 74, 0.06), rgba(234, 88, 12, 0.08));
+}
+
+.people-level > summary::-webkit-details-marker {
+  display: none;
+}
+
+.people-level > summary::before {
+  content: ">";
+  display: inline-block;
+  font-weight: 800;
+  color: var(--accent);
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.people-level[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.people-level--top > summary {
+  border-left: 4px solid var(--accent);
+}
+
+.people-level--sub {
+  margin-top: 0.7rem;
+  box-shadow: none;
+}
+
+.people-level--sub > summary {
+  font-size: 0.8rem;
+  padding: 0.58rem 0.82rem;
   color: var(--text-muted);
+  background: linear-gradient(120deg, rgba(27, 42, 74, 0.04), rgba(234, 88, 12, 0.06));
+}
+
+.people-level > .people-chip-list,
+.people-level > .people-sublevels,
+.people-level > .people-level-content {
+  padding: 0.78rem 0.9rem 0.9rem;
+}
+
+.people-sublevels {
+  display: grid;
+  gap: 0;
 }
 
 .people-chip-list {
@@ -789,41 +820,38 @@ li.project-card {
   background: linear-gradient(120deg, rgba(27, 42, 74, 0.04), rgba(27, 42, 74, 0.02));
 }
 
-.people-list {
-  margin: 0.1rem 0 0 0;
-  padding-left: 1.35rem;
-  color: var(--text);
-  line-height: 1.6;
-  font-size: 0.9rem;
+.alumni-person {
+  margin: 0;
 }
 
-.people-list li {
-  margin: 0.4rem 0;
+.alumni-person > summary {
+  list-style: none;
+  cursor: pointer;
 }
 
-.people-list--details {
-  padding-left: 1.15rem;
+.alumni-person > summary::-webkit-details-marker {
+  display: none;
 }
 
-.alumni-person-block {
-  margin: 0.75rem 0 0;
+.alumni-person > summary.people-chip::after {
+  content: ">";
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-left: 0.3rem;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
 }
 
-.alumni-person-block:first-of-type {
-  margin-top: 0.2rem;
-}
-
-.alumni-person-name {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text);
+.alumni-person[open] > summary.people-chip::after {
+  transform: rotate(90deg);
 }
 
 .alumni-person-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin-top: 0.35rem;
+  margin: 0.45rem 0 0 0.1rem;
 }
 
 .alumni-badge {
