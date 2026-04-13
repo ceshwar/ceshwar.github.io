@@ -506,13 +506,34 @@ main {
 
 /* Home: minimal icon row under intro */
 .hero-quick-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35rem 0.9rem;
+  /* Icons ~1.25× typical body text (root 1rem) */
+  --quick-link-icon-size: 1.25rem;
+  --quick-link-icon-fill: 1.15rem; /* filled glyphs read larger at same box */
+
+  width: 100%;
+  max-width: 100%;
   margin: 0.75rem 0 0 0;
   padding: 0.85rem 0 0 0;
   overflow: visible;
+
+  /* Mobile: map icons across horizontal space (2×3 for 6 links) */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: min(1.25rem, 4vw);
+  row-gap: 0.65rem;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (min-width: 560px) {
+  .hero-quick-links {
+    /* Desktop / tablet: compact row like before (no full-width stretch) */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.35rem 0.9rem;
+  }
 }
 
 .hero-quick-links .quick-link {
@@ -520,7 +541,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.15rem;
+  padding: 0.35rem;
   border: 0;
   background: none;
   box-shadow: none;
@@ -534,14 +555,18 @@ main {
   .hero-quick-links .quick-link[data-label]::after {
     content: attr(data-label);
     position: absolute;
-    bottom: calc(100% + 6px);
+    /* Below the icon so labels don’t cover the intro paragraph above */
+    top: calc(100% + 8px);
+    bottom: auto;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0.2rem 0.45rem;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    padding: 0.3rem 0.55rem;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
     color: #fff;
     background: var(--navy);
     border-radius: 3px;
@@ -552,6 +577,11 @@ main {
     pointer-events: none;
     transition: opacity 0.12s ease, visibility 0.12s ease;
     z-index: 25;
+  }
+
+  .hero-quick-links .quick-link[data-label="CV"]::after {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   .hero-quick-links .quick-link[data-label]:hover::after,
@@ -579,8 +609,8 @@ main {
 }
 
 .hero-quick-links .quick-link-icon--img img {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: var(--quick-link-icon-size);
+  height: var(--quick-link-icon-size);
   object-fit: contain;
   display: block;
   opacity: 0.82;
@@ -593,13 +623,13 @@ main {
 }
 
 .hero-quick-links .quick-link-svg {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: var(--quick-link-icon-size);
+  height: var(--quick-link-icon-size);
 }
 
 .hero-quick-links .quick-link-svg--fill {
-  width: 0.95rem;
-  height: 0.95rem;
+  width: var(--quick-link-icon-fill);
+  height: var(--quick-link-icon-fill);
 }
 
 /* Lab: logo + title */
