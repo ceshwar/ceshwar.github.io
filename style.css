@@ -506,9 +506,9 @@ main {
 
 /* Home: minimal icon row under intro */
 .hero-quick-links {
-  /* Icons ~1.25× typical body text (root 1rem) */
-  --quick-link-icon-size: 1.25rem;
-  --quick-link-icon-fill: 1.15rem; /* filled glyphs read larger at same box */
+  /* Mobile: smaller icons so six links stay on one row */
+  --quick-link-icon-size: 0.9rem;
+  --quick-link-icon-fill: 0.84rem;
 
   width: 100%;
   max-width: 100%;
@@ -516,21 +516,20 @@ main {
   padding: 0.85rem 0 0 0;
   overflow: visible;
 
-  /* Mobile: map icons across horizontal space (2×3 for 6 links) */
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: min(1.25rem, 4vw);
-  row-gap: 0.65rem;
-  justify-items: center;
+  display: flex;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.15rem;
 }
 
 @media (min-width: 560px) {
   .hero-quick-links {
-    /* Desktop / tablet: compact row like before (no full-width stretch) */
-    display: flex;
+    /* Desktop / tablet: larger icons, compact row like before */
+    --quick-link-icon-size: 1.25rem;
+    --quick-link-icon-fill: 1.15rem;
+
     flex-wrap: wrap;
-    align-items: center;
     justify-content: flex-start;
     gap: 0.35rem 0.9rem;
   }
