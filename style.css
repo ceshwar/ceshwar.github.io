@@ -487,6 +487,7 @@ main {
 .hero-text {
   flex: 1;
   min-width: min(100%, 280px);
+  overflow: visible;
 }
 
 .hero-text h1 {
@@ -501,6 +502,104 @@ main {
   .hero-text h1 {
     color: #f1f5f9;
   }
+}
+
+/* Home: minimal icon row under intro */
+.hero-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.9rem;
+  margin: 0.75rem 0 0 0;
+  padding: 0.85rem 0 0 0;
+  overflow: visible;
+}
+
+.hero-quick-links .quick-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--text-muted) !important;
+  text-decoration: none !important;
+  border-radius: 4px;
+  transition: color 0.12s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-quick-links .quick-link[data-label]::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.2rem 0.45rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--navy);
+    border-radius: 3px;
+    box-shadow: 0 2px 10px var(--shadow);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, visibility 0.12s ease;
+    z-index: 25;
+  }
+
+  .hero-quick-links .quick-link[data-label]:hover::after,
+  .hero-quick-links .quick-link[data-label]:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.hero-quick-links .quick-link:hover {
+  color: var(--link) !important;
+}
+
+.hero-quick-links .quick-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hero-quick-links .quick-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  color: inherit;
+}
+
+.hero-quick-links .quick-link-icon--img img {
+  width: 1.05rem;
+  height: 1.05rem;
+  object-fit: contain;
+  display: block;
+  opacity: 0.82;
+  filter: grayscale(1);
+}
+
+.hero-quick-links .quick-link:hover .quick-link-icon--img img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.hero-quick-links .quick-link-svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.hero-quick-links .quick-link-svg--fill {
+  width: 0.95rem;
+  height: 0.95rem;
 }
 
 /* Lab: logo + title */
