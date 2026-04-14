@@ -507,8 +507,8 @@ main {
 /* Home: minimal icon row under intro */
 .hero-quick-links {
   /* Mobile: smaller icons so six links stay on one row */
-  --quick-link-icon-size: 0.9rem;
-  --quick-link-icon-fill: 0.84rem;
+  --quick-link-icon-size: 1.02rem;
+  --quick-link-icon-fill: 0.94rem;
 
   width: 100%;
   max-width: 100%;
@@ -520,7 +520,7 @@ main {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.15rem;
+  gap: 0.1rem;
 }
 
 @media (min-width: 560px) {
@@ -540,7 +540,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem;
+  padding: 0.2rem;
   border: 0;
   background: none;
   box-shadow: none;
@@ -548,6 +548,12 @@ main {
   text-decoration: none !important;
   border-radius: 4px;
   transition: color 0.12s ease;
+}
+
+@media (min-width: 560px) {
+  .hero-quick-links .quick-link {
+    padding: 0.35rem;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
