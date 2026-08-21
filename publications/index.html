@@ -30,7 +30,7 @@
             <a href="../bio/">Bio</a>
             <a href="./">Publications</a>
             <a href="../lab/">Lab</a>
-            <a href="../files/eshwar_cv_may_2026.pdf">CV</a>
+            <a href="../files/eshwar_cv_aug_2026.pdf">CV</a>
           </nav>
         </div>
       </div>
@@ -48,6 +48,7 @@
             <span class="page-nav-label page-nav-label--hint">Newest → older</span>
           </div>
           <ul class="year-rail" role="list">
+            <li><a href="#y-2027">2027</a></li>
             <li><a href="#y-2026">2026</a></li>
             <li><a href="#y-2025">2025</a></li>
             <li><a href="#y-2024">2024</a></li>
@@ -65,6 +66,7 @@
             <label for="pub-year-select" class="visually-hidden">Jump to publication year</label>
             <select id="pub-year-select" class="year-select">
               <option value="">Select year…</option>
+              <option value="y-2027">2027</option>
               <option value="y-2026">2026</option>
               <option value="y-2025">2025</option>
               <option value="y-2024">2024</option>
@@ -81,38 +83,90 @@
           </div>
         </nav>
         <div class="publications-list">
+<section class="pub-year" id="y-2027">
+<h2 class="pub-year-heading">2027</h2>
+<article class="pub-item">
+<div class="pub-num">1</div>
+<h3 class="pub-title">Beyond Throughput: Objectives and Tradeoffs in Volunteer Moderation</h3>
+<p class="pub-authors">Tanvi Bajpai, Eshwar Chandrasekharan</p>
+<p class="pub-meta"><span class="pub-venue">ICWSM 2027</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2409.16840">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
+<p class="pub-abstract">Reddit relies on volunteer moderators to enforce community rules, configure tools, and review flagged content. This labor is substantial, worth millions in unpaid effort, and increasingly hard to sustain as communities grow. While recent updates to Reddit&#x27;s modqueue emphasize efficiency and reducing redundancy, recent research shows that moderators use the interface in varied ways, value objectives beyond throughput (such as fairness and accuracy), and often resist features that disrupt workflows. In this paper, we survey 106 active Reddit moderators to examine the objectives they bring to their modqueue work and the kinds of interventions they consider helpful. Our findings highlight wide variation in values and workflows, with no single objective beyond accuracy dominating, and different perspectives on which interventions are useful. To address this diversity, we introduce a simulation-based approach that can complement empirical findings by probing tradeoffs and testing potential interventions, and provide design recommendations based on our findings.</p>
+</article>
+</section>
 <section class="pub-year" id="y-2026">
 <h2 class="pub-year-heading">2026</h2>
 <article class="pub-item">
 <div class="pub-num">1</div>
+<h3 class="pub-title">VASTU: Language Models Struggle to Recognize Online Community Values</h3>
+<p class="pub-authors">Agam Goyal, Xianyang Zhan, Charlotte Lambert, Koustuv Saha, Eshwar Chandrasekharan</p>
+<p class="pub-meta"><span class="pub-venue">EMNLP 2026 (main conf.)</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2601.12491">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
+<p class="pub-abstract">Detecting what content communities value is a foundational challenge for social computing systems—from feed curation and content ranking to moderation tools and personalized recommendation systems. Yet existing approaches remain fragmented across methodological paradigms, and it remains unclear which methods best capture community-specific notions of value. We introduce VASTU (Value-Aligned Social Toolkit for Online Content Curation), a benchmark and evaluation framework for systematically comparing approaches to detecting community-valued content. VASTU includes a dataset of 75,000 comments from 15 diverse Reddit communities, annotated with community approval labels and rich linguistic features. Using VASTU, we evaluate feature-based models, transformers, prompted and fine-tuned language models under global versus community-specific training regimes. We find that community-specific models consistently outperform global approaches, with fine-tuned transformers achieving the strongest performance (0.72 AUROC). Notably, fine-tuned SLMs (0.65 AUROC) substantially outperform prompted LLMs (0.60 AUROC) despite being 100 times smaller. Counterintuitively, chain-of-thought prompting provides no benefit, and reasoning models perform the worst (0.53 AUROC), suggesting this task requires learning community norms rather than test-time reasoning. By releasing VASTU, we provide a standardized benchmark to advance research on value-aligned sociotechnical systems.</p>
+</article>
+<article class="pub-item">
+<div class="pub-num">2</div>
+<h3 class="pub-title">LLUMI: Improving LLM Writing Assistance for Mental Health Support with Online Community Feedback</h3>
+<p class="pub-authors">Jiwon Kim, Maya Ajit, Sherry Gong, Soorya Ram Shimgekar, Dong Whi Yoo, Eshwar Chandrasekharan, Koustuv Saha</p>
+<p class="pub-meta"><span class="pub-venue">EMNLP 2026 (main conf.)</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2605.30273">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
+<p class="pub-abstract">Large language models (LLMs) show promise in generating supportive responses for mental health queries, but improving their usefulness, empathy, and safety often requires substantial compute, expert input, and labeled data. At the same time, deploying proprietary, cloud-based models for mental health-related interactions raises important privacy and data-governance concerns, given the sensitivities. To address this challenge, we introduce LLUMI setup that can be hosted in-house within protected environments. LLUMI consists of two complementary components: a generation model (GM), which drafts supportive responses to mental health queries, and an improvement model (IM), which revises an initial human-crafted response. We leverage feedback signals from Reddit mental health communities, using community endorsement patterns such as upvotes and downvotes to construct chosen–rejected response pairs for Supervised Fine Tuning (SFT) and Direct Preference Optimization (DPO). We further align LLUMI using human evaluation across five dimensions: readability, empathy, connection, actionability, and safety. Our results show that, despite relying on smaller open-source models rather than proprietary cloud-based GPT models, LLUMI achieves comparable performance across linguistic analyses and human evaluations. These findings suggest that open-source models, when trained with community-derived preference signals, can support high-quality mental health support assistance while offering a more privacy-preserving alternative for sensitive support contexts.</p>
+</article>
+<article class="pub-item">
+<div class="pub-num">3</div>
+<h3 class="pub-title">The Hidden Toll of Social Media News on Psychosocial Wellbeing</h3>
+<p class="pub-authors">Olivia Pal, Agam Goyal, Eshwar Chandrasekharan, Koustuv Saha</p>
+<p class="pub-meta"><span class="pub-venue">EMNLP 2026 (main conf.)</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2601.13487">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
+<p class="pub-abstract">News consumption on social media has become ubiquitous, yet how different forms of engagement shape psychosocial outcomes remains unclear. To address this gap, we leveraged a large-scale dataset of ∼26M posts and ∼45M comments on the Bluesky platform, and conducted a quasi-experimental study, matching 81,345 Treated users exposed to News feeds with 83,711 Control users using stratified propensity score analysis. We examined psychosocial wellbeing, in terms of affective, behavioral, and cognitive outcomes. Our findings reveal that news engagement produces systematic trade-offs: increased depression, stress, and anxiety, yet decreased loneliness and increased social interaction on the platform. Regression models reveal that News feed bookmarking is associated with greater psychosocial deterioration compared to commenting or quoting, with magnitude differences exceeding tenfold. These per-engagement effects accumulate with repeated exposure, showing significant psychosocial impacts. Our work extends theories of news effects beyond crisis-centric frameworks by demonstrating that routine consumption creates distinct psychological dynamics depending on engagement type, and bears implications for tools and interventions for mitigating the psychosocial costs of news consumption on social media.</p>
+</article>
+<article class="pub-item">
+<div class="pub-num">4</div>
+<h3 class="pub-title">Facts Without Rules: Boundary Metadata Collapse in Multi-Agent LLM Handoffs</h3>
+<p class="pub-authors">Yian Wang, Agam Goyal, Eshwar Chandrasekharan, Hari Sundaram</p>
+<p class="pub-meta"><span class="pub-venue">EMNLP 2026 (Findings)</span> · <span class="pub-note">(forthcoming)</span></p>
+<p class="pub-abstract">Abstract forthcoming; will be updated after the camera-ready version is available.</p>
+</article>
+<article class="pub-item">
+<div class="pub-num">5</div>
+<h3 class="pub-title">Answer Bubbles: Information Exposure in AI-Mediated Search</h3>
+<p class="pub-authors">Michelle Huang*, Agam Goyal*, Koustuv Saha, Eshwar Chandrasekharan</p>
+<p class="pub-meta"><span class="pub-venue">EMNLP 2026 (Findings)</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2603.16138">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
+<p class="pub-abstract">Generative search systems are increasingly replacing link-based retrieval with AI-generated summaries, yet little is known about how these systems differ in sources, language, and fidelity to cited material. We examine responses to 11,000 real search queries across four systems—vanilla GPT, Search GPT, Google AI Overviews, and traditional Google Search—at three levels: source diversity, linguistic characterization of the generated summary, and source-summary fidelity. We find that generative search systems exhibit significant source-selection biases in their citations, favoring certain sources over others. Incorporating search also selectively attenuates epistemic markers, reducing hedging by up to 60% while preserving confidence language in the AI-generated summaries. At the same time, AI summaries further compound the citation biases: Wikipedia and longer sources are disproportionately overrepresented, whereas cited social media content and negatively framed sources are substantially underrepresented. Our findings highlight the potential for answer bubbles, in which identical queries yield structurally different information realities across systems, with implications for user trust, source visibility, and the transparency of AI-mediated information access.</p>
+</article>
+<article class="pub-item">
+<div class="pub-num">6</div>
 <h3 class="pub-title">The Language of Approval: Identifying the Drivers of Positive Feedback Online</h3>
 <p class="pub-authors">Agam Goyal, Charlotte Lambert, Eshwar Chandrasekharan</p>
 <p class="pub-meta"><span class="pub-venue">CHI 2026</span> · <span class="pub-links"><a href="../files/chi2026-language-of-approval.pdf">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
 <p class="pub-abstract">Positive feedback via likes and awards is central to online governance, yet which attributes of users’ posts elicit rewards—and how these vary across authors and communities—remains unclear. To examine this, we combine quasi-experimental causal inference with predictive modeling on 11M posts from 100 subreddits. We identify linguistic patterns and stylistic attributes causally linked to rewards, controlling for author reputation, timing, and community context. For example, overtly complicated language, tentative style, and toxicity reduce rewards. We use our set of curated features to train models that can detect highly-upvoted posts with high AUC. Our audit of community guidelines highlights a “policy-practice gap”—most rules focus primarily on civility and formatting requirements, with little emphasis on the attributes identified to drive positive feedback. These results inform the design of community guidelines, support interfaces that teach users how to craft desirable contributions, and moderation workflows that emphasize positive reinforcement over purely punitive enforcement.</p>
 </article>
 <article class="pub-item">
-<div class="pub-num">2</div>
+<div class="pub-num">7</div>
 <h3 class="pub-title">Needling Through the Threads: A Visualization Tool for Navigating Threaded Online Discussions</h3>
 <p class="pub-authors">Yijun Liu, Frederick Choi, Eshwar Chandrasekharan</p>
 <p class="pub-meta"><span class="pub-venue">CHI 2026</span> · <span class="pub-links"><a href="../files/chi2026-needle.pdf">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
 <p class="pub-abstract">Navigating large-scale online discussions is difficult due to their rapid pace and high volume of content. Platforms like Reddit employ “threads” to visually organize parallel discussions, but deep nesting obscures conversation flow. For moderators, this fragmentation compounds the difficulty of following evolving conversations and maintaining context across threads, which limits timely and effective moderation. In this paper, we present Needle, an interactive system that applies visual analytics to summarize key conversational metrics: activity, toxicity, and voting trends over time. Needle provides both high-level overviews and detailed breakdowns of threads, enabling moderators to identify priority areas without reading through entire nested conversations. Through a user study with ten Reddit moderators, we find that Needle provides a practical solution to maintain contextual understanding when navigating threaded discussions. Based on these findings, we propose design guidelines for future visualization-based tools that shape how people consume, interpret, and make sense of large-scale online discussions.</p>
 </article>
 <article class="pub-item">
-<div class="pub-num">3</div>
+<div class="pub-num">8</div>
 <h3 class="pub-title">&quot;Think about it like you&#x27;re a firefighter&quot;: Understanding How Reddit Moderators Use the Modqueue</h3>
 <p class="pub-authors">Tanvi Bajpai, Eshwar Chandrasekharan</p>
 <p class="pub-meta"><span class="pub-venue">CHI 2026</span> · <span class="pub-links"><a href="../files/chi2026-modqueue-survey.pdf">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
 <p class="pub-abstract">On Reddit, the moderation queue (modqueue) is the platform’s primary interface for reviewing user-reported and automatically flagged content. Despite its central role in Reddit’s community reliant moderation model, little is known about how moderators actually use it in practice. To address this gap, we surveyed 110 moderators, who collectively oversee more than 400 subreddits, to understand how the modqueue fits into their workflows and what its design enables or constrains. We find substantial variation in modqueue use: some moderators treat it as a daily checklist, others use it to identify patterns or emerging issues, and many routinely leave the interface to gather additional context or coordinate with teammates. Respondents also described persistent challenges, including coordination issues such as collisions, incomplete or noisy information signals, and friction created by fragmented interface versions and reliance on third-party tools. Taken together, we show the modqueue is neither a one-size-fits-all solution nor sufficient on its own for supporting moderator review. We outline opportunities for more modular, better-integrated moderation infrastructures that support both item-level review and broader governance activities, and that better align with the collaborative and value-driven nature of volunteer moderation on Reddit.</p>
 </article>
 <article class="pub-item">
-<div class="pub-num">4</div>
+<div class="pub-num">9</div>
+<h3 class="pub-title">Masking or Mitigating? Deconstructing the Impact of Query Rewriting on Retriever Biases in RAG</h3>
+<p class="pub-authors">Agam Goyal, Koyel Mukherjee, Apoorv Saxena, Anirudh Phukan, Eshwar Chandrasekharan, Hari Sundaram</p>
+<p class="pub-meta"><span class="pub-venue">ACL 2026 (Findings)</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2604.06097">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
+<p class="pub-abstract">Dense retrievers in retrieval-augmented generation (RAG) systems exhibit systematic biases—including brevity, position, literal matching, and repetition biases—that can compromise retrieval quality. Query rewriting techniques are now standard in RAG pipelines, yet their impact on these biases remains unexplored. We present the first systematic study of how query enhancement techniques affect dense retrieval biases, evaluating five methods across six retrievers. Our findings reveal that simple LLM-based rewriting achieves the strongest aggregate bias reduction (54%), yet fails under adversarial conditions where multiple biases combine. Mechanistic analysis uncovers two distinct mechanisms: simple rewriting reduces bias through increased score variance, while pseudo-document generation methods achieve reduction through genuine decorrelation from bias-inducing features. However, no technique uniformly addresses all biases, and effects vary substantially across retrievers. Our results provide practical guidance for selecting query enhancement strategies based on specific bias vulnerabilities. More broadly, we establish a taxonomy distinguishing query-document interaction biases from document encoding biases, clarifying the limits of query-side interventions for debiasing RAG systems.</p>
+</article>
+<article class="pub-item">
+<div class="pub-num">10</div>
 <h3 class="pub-title">Uncovering the Internet’s Hidden Values: An Empirical Study of Desirable Behavior Using Highly-Upvoted Reddit Content</h3>
 <p class="pub-authors">Agam Goyal, Charlotte Lambert, Yoshee Jain, Eshwar Chandrasekharan</p>
 <p class="pub-meta"><span class="pub-venue">ICWSM 2026</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2410.13036">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
 <p class="pub-abstract">A major task for moderators of online spaces is norm-setting, essentially creating shared norms for user behavior in their communities. Platform design principles emphasize the importance of highlighting norm-adhering examples and explicitly stating community norms. However, norms and values vary between communities and go beyond content-level attributes, making it challenging for platforms and researchers to provide automated ways to identify desirable behavior to be highlighted. Current automated approaches to detect desirability are limited to measures of prosocial behavior, but we do not know whether these measures fully capture the spectrum of what communities value. In this paper, we use upvotes, which express community approval, as a proxy for desirability and examine 16,000 highly-upvoted comments across 80 popular sub-communities on Reddit. Using a large language model, we extract values from these comments across two years (2016 and 2022) and compile 64 and 72 macro, meso, and micro values for 2016 and 2022 respectively, based on their frequency across communities. Furthermore, we find that existing computational models for measuring prosociality were inadequate to capture on average 82% of the values we extracted. Finally, we show that our approach can not only extract most of the qualitatively-identified values from prior taxonomies, but also uncover new values that are actually encouraged in practice. Our findings highlight the need for nuanced models of desirability that go beyond preexisting prosocial measures. This work has implications for improving moderator understanding of their community values and provides a framework that can supplement qualitative approaches with larger-scale content analyses.</p>
 </article>
 <article class="pub-item">
-<div class="pub-num">5</div>
+<div class="pub-num">11</div>
 <h3 class="pub-title">Examining Algorithmic Curation on Social Media: An Empirical Audit of Reddit’s r/popular Feed</h3>
 <p class="pub-authors">Jackie Chan, Frederick Choi, Koustuv Saha, Eshwar Chandrasekharan</p>
 <p class="pub-meta"><span class="pub-venue">ICWSM 2026</span> · <span class="pub-links"><a href="https://arxiv.org/abs/2502.20491">Preprint</a><span class="pub-note"> (forthcoming)</span></span></p>
