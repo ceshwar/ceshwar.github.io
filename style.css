@@ -473,8 +473,17 @@ main {
   margin-bottom: 8px;
 }
 
-.headshot {
+.hero-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
   width: min(240px, 100%);
+  flex-shrink: 0;
+}
+
+.headshot {
+  width: 100%;
   height: auto;
   border-radius: 14px;
   object-fit: cover;
@@ -504,35 +513,21 @@ main {
   }
 }
 
-/* Home: minimal icon row under intro */
+/* Home: icon row under headshot (Koustuv-style) */
 .hero-quick-links {
-  /* Mobile: smaller icons so six links stay on one row */
-  --quick-link-icon-size: 1.02rem;
-  --quick-link-icon-fill: 0.94rem;
+  --quick-link-icon-size: 22px;
 
   width: 100%;
   max-width: 100%;
-  margin: 0.75rem 0 0 0;
-  padding: 0.85rem 0 0 0;
+  margin: 0;
+  padding: 0;
   overflow: visible;
 
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.1rem;
-}
-
-@media (min-width: 560px) {
-  .hero-quick-links {
-    /* Desktop / tablet: larger icons, compact row like before */
-    --quick-link-icon-size: 1.25rem;
-    --quick-link-icon-fill: 1.15rem;
-
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0.35rem 0.9rem;
-  }
+  justify-content: center;
+  gap: 0.9rem;
 }
 
 .hero-quick-links .quick-link {
@@ -550,17 +545,11 @@ main {
   transition: color 0.12s ease;
 }
 
-@media (min-width: 560px) {
-  .hero-quick-links .quick-link {
-    padding: 0.35rem;
-  }
-}
-
 @media (hover: hover) and (pointer: fine) {
   .hero-quick-links .quick-link[data-label]::after {
     content: attr(data-label);
     position: absolute;
-    /* Below the icon so labels don’t cover the intro paragraph above */
+    /* Below the icon so labels don’t cover the name above */
     top: calc(100% + 8px);
     bottom: auto;
     left: 50%;
@@ -597,7 +586,7 @@ main {
 }
 
 .hero-quick-links .quick-link:hover {
-  color: var(--link) !important;
+  color: var(--accent) !important;
 }
 
 .hero-quick-links .quick-link:focus-visible {
@@ -613,28 +602,9 @@ main {
   color: inherit;
 }
 
-.hero-quick-links .quick-link-icon--img img {
-  width: var(--quick-link-icon-size);
-  height: var(--quick-link-icon-size);
-  object-fit: contain;
-  display: block;
-  opacity: 0.82;
-  filter: grayscale(1);
-}
-
-.hero-quick-links .quick-link:hover .quick-link-icon--img img {
-  opacity: 1;
-  filter: grayscale(0);
-}
-
 .hero-quick-links .quick-link-svg {
   width: var(--quick-link-icon-size);
   height: var(--quick-link-icon-size);
-}
-
-.hero-quick-links .quick-link-svg--fill {
-  width: var(--quick-link-icon-fill);
-  height: var(--quick-link-icon-fill);
 }
 
 /* Lab: logo + title */
@@ -1474,7 +1444,7 @@ p.pub-abstract {
     padding-right: max(16px, env(safe-area-inset-right, 0px));
   }
 
-  .headshot {
+  .hero-photo {
     width: min(260px, 88vw);
   }
 
