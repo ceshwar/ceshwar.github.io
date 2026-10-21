@@ -764,12 +764,15 @@ li.project-card {
 
 .project-card {
   position: relative;
+  min-width: 0;
   padding: 1.2rem 1.3rem 1.3rem;
   background: linear-gradient(135deg, var(--card) 0%, rgba(234, 88, 12, 0.06) 100%);
   border-radius: 14px;
   border: 1px solid var(--border);
   box-shadow: 0 2px 14px var(--shadow);
   overflow: hidden;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
 }
 
 .project-card::before {
@@ -995,6 +998,16 @@ li.project-card {
   line-height: 1.35;
   color: var(--text-muted);
   font-weight: 500;
+}
+
+.alumni-role a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.alumni-role a:hover {
+  color: var(--accent);
 }
 
 .alumni-person-meta {
